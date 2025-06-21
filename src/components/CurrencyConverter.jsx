@@ -2,6 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import Dropdown from "./Dropdown.jsx";
 import useCurrencyFetch from "../hooks/useCurrencyFetch.js";
 import useConverterFetch from "../hooks/useConverterFetch.js";
+import swapIMG from "../../assets/two-way.png";
 
 function CurrencyConverter() {
   const { currencies } = useCurrencyFetch();
@@ -62,11 +63,7 @@ function CurrencyConverter() {
           onChange={converCurrency}
           value={fromCurrency}
         ></Dropdown>
-        <img
-          src="..\assets\two-way.png"
-          className="flex size-8 mt-7"
-          onClick={swapCur}
-        ></img>
+        <img src={swapIMG} className="flex size-8 mt-7" onClick={swapCur}></img>
         <Dropdown
           currencys={currencies}
           ref={tCur}

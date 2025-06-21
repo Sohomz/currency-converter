@@ -1,17 +1,21 @@
 {
+  "homapage": "https://Sohomz.github.io/currency-converter",
   "name": "06-currencyconverter",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "react-select": "^5.10.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",
